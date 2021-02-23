@@ -1,7 +1,6 @@
 'use strict';
 const faker = require('faker');
 const bcrypt = require('bcryptjs');
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Users', [
@@ -22,7 +21,6 @@ module.exports = {
       },
     ], {});
   },
-
   down: (queryInterface, Sequelize) => {
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete('Users', {
