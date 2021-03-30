@@ -6,6 +6,9 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 
+import Header from './Header'
+
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,6 +18,7 @@ function App() {
 
   return (
     <>
+      
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
@@ -26,6 +30,26 @@ function App() {
           </Route>
         </Switch>
       )}
+
+        <div>
+          <h1>Spin City</h1>
+        </div>
+        <Header />
+
+        <div>
+          <h1>Explore Nearby</h1>
+        </div>
+        <div>
+          <h1>Live Anywhere</h1>
+        </div>
+        <div>
+          <h1>Become a Host</h1>
+        </div>
+        <div>
+          <h1>Discover Experiences</h1>
+        </div>
+
+
     </>
   );
 }
